@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}AI Attendance - Home{% endblock %}
+
+{% block content %}
+<div class="container">
+  <h1>Welcome to Smart AI Attendance System 🤖</h1>
+  <p>Empowered by <strong>Facial Recognition</strong> and <strong>FastAPI</strong> — Manage attendance with next-gen automation.</p>
+
+  <div class="actions">
+    <a href="/register/" class="btn">➕ Register Student</a>
+    <a href="/train/" class="btn">🧠 Train Model</a>
+    <a href="/attendance/subject" class="btn">📋 Mark Attendance</a>
+    <a href="/attendance/" class="btn">📂 View Attendance</a>
+  </div>
+
+  <div class="info">
+    <h3>🧭 How it Works</h3>
+    <ul>
+      <li>Register each student using webcam-based face capture.</li>
+      <li>Train the AI model for facial pattern recognition.</li>
+      <li>Mark attendance automatically — subject-wise and real-time.</li>
+      <li>Download or review attendance sheets instantly.</li>
+    </ul>
+  </div>
+</div>
+{% endblock %}

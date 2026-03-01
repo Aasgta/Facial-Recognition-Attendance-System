@@ -1,0 +1,19 @@
+# --- Virtual Environment ---
+FaceAtt/
+venv/
+.env/
+
+# --- Python cache ---
+__pycache__/
+*.pyc
+
+# --- Data folders ---
+Attendance/
+TrainingImage/
+TrainingImageLabel/
+StudentDetails/
+
+# --- IDE & OS files ---
+.vscode/
+.idea/
+.DS_Store

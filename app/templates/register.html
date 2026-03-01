@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Register student</h2>
+<form method="post">
+  Enrollment: <input name="enrollment" required><br>
+  Name: <input name="name" required><br>
+  <button type="submit">Capture faces (will open webcam)</button>
+</form>
+{% if msg %}
+  <p>{{ msg }}</p>
+{% endif %}
+{% endblock %}

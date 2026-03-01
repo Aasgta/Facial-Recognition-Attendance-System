@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>{{ filename }}</h2>
+<div>
+  {{ table | safe }}
+</div>
+<a href="/attendance/download/{{ subject }}/{{ filename }}">Download as CSV</a>
+{% endblock %}

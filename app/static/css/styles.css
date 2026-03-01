@@ -1,0 +1,14 @@
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: radial-gradient(circle, #00e5ff11 1px, transparent 1px);
+  background-size: 40px 40px;
+  z-index: -1;
+  animation: pulse 8s infinite alternate;
+}
+
+@keyframes pulse {
+  from {opacity: 0.4;}
+  to {opacity: 0.8;}
+}

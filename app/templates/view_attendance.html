@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Attendance for {{ subject }}</h2>
+<ul>
+  {% for file in files %}
+  <li>
+    <a href="/attendance/view/{{ subject }}/{{ file }}">{{ file }}</a> |
+    <a href="/attendance/download/{{ subject }}/{{ file }}">Download CSV</a>
+  </li>
+  {% endfor %}
+</ul>
+{% endblock %}

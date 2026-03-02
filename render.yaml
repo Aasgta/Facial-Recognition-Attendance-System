@@ -1,0 +1,11 @@
+# render.yaml
+services:
+  - type: web
+    name: fastapi-attendance
+    env: python
+    region: singapore
+    buildCommand: |
+      apt-get update && apt-get install -y libjpeg-dev zlib1g-dev libpng-dev libtiff-dev libopenjp2-7-dev
+      pip install --upgrade pip
+      pip install --no-cache-dir -r requirements.txt
+    startCommand: bash start.sh

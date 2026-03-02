@@ -6,6 +6,9 @@ services:
     buildCommand: |
       apt-get update && apt-get install -y libjpeg-dev zlib1g-dev libpng-dev libtiff-dev libopenjp2-7-dev
       pip install --upgrade pip setuptools wheel
+      # Install Pillow manually (compatible version)
       pip install --no-cache-dir Pillow==9.5.0
-      pip install --no-cache-dir -r requirements.txt
+      # Install all other requirements EXCEPT Pillow from requirements.txt
+      grep -v "Pillow" requirements.txt > temp_requirements.txt
+      pip install --no-cache-dir -r temp_requirements.txt
     startCommand: bash start.sh
